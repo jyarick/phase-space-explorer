@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phase-space-explorer"
+version = "0.1.0"
+description = "Modular dynamical systems teaching tool: simulate, analyze stability, plot phase space."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.20",
+    "scipy>=1.7",
+    "matplotlib>=3.4",
+    "ipywidgets>=8.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ipykernel"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["phase_space_explorer*"]
